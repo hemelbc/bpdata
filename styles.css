@@ -1,0 +1,35 @@
+/* Previous CSS remains the same, just add these new styles at the end */
+
+/* Embedded Form Container */
+.embedded-form {
+    max-width: 640px;
+    margin: 30px auto;
+    display: none; /* Hidden by default */
+}
+
+.embedded-form iframe {
+    width: 100%;
+    min-height: 891px;
+    border: none;
+}
+
+/* Show embedded form on mobile */
+@media (max-width: 768px) {
+    .form-container {
+        display: none; /* Hide custom form on mobile */
+    }
+    
+    .embedded-form {
+        display: block; /* Show embedded form on mobile */
+        margin: 0;
+        padding: 15px;
+    }
+}
+
+/* Responsive iframe */
+.embedded-form iframe {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
