@@ -4,75 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Contact Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .radio-group {
-            margin-top: 5px;
-        }
-        .submit-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .submit-btn:hover {
-            background-color: #45a049;
-        }
-        .required {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Sales Contact Form</h2>
-    <!-- Replace FORM_URL with your actual Google Form URL -->
-    <form action="YOUR_GOOGLE_FORM_URL" method="POST">
-        <div class="form-group">
-            <label>Area Name <span class="required">*</span></label>
-            <!-- Replace entry.XXXXXXXX with your actual Google Form field ID -->
-            <input type="text" name="entry.XXXXXXXX" required>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Sales Contact Form</h2>
         </div>
-
-        <div class="form-group">
-            <label>Customer Name <span class="required">*</span></label>
-            <input type="text" name="entry.XXXXXXXX" required>
-        </div>
-
-        <div class="form-group">
-            <label>Mobile Number <span class="required">*</span></label>
-            <input type="text" name="entry.XXXXXXXX" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
-        </div>
-
-        <div class="form-group">
-            <label>Sale Made? <span class="required">*</span></label>
-            <div class="radio-group">
-                <input type="radio" name="entry.XXXXXXXX" value="Yes" required> Yes
-                <input type="radio" name="entry.XXXXXXXX" value="No"> No
+        
+        <!-- Updated with your Google Form URL -->
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeDFDfd_k8Pg-q539pSY2JMd9DFR0KNPOJrnM7_HnrN6XaL6Q/formResponse" method="POST">
+            <div class="form-group">
+                <label>Area Name<span class="required">*</span></label>
+                <input type="text" name="entry.996352442" required>
+                <span class="error-message">This field is required</span>
             </div>
-        </div>
 
-        <button type="submit" class="submit-btn">Submit</button>
-    </form>
+            <div class="form-group">
+                <label>Customer Name<span class="required">*</span></label>
+                <input type="text" name="entry.996352442" required>
+                <span class="error-message">This field is required</span>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile Number<span class="required">*</span></label>
+                <input type="text" name="entry.996352442" pattern="[0-9]{10}" required>
+                <span class="error-message">Please enter a valid 10-digit number</span>
+            </div>
+
+            <div class="form-group">
+                <label>Sale Made?<span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="entry.996352442" value="Yes" required>
+                        <label>Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="entry.996352442" value="No">
+                        <label>No</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Embedded Google Form as backup -->
+    <div class="embedded-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFDfd_k8Pg-q539pSY2JMd9DFR0KNPOJrnM7_HnrN6XaL6Q/viewform?embedded=true" 
+                width="640" 
+                height="891" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+            Loading…
+        </iframe>
+    </div>
 </body>
 </html>
